@@ -78,72 +78,72 @@ def calculator(n,o,m):
         arccossec(m)
 def sum (n,m):
     sum_n_m = n + m
-    print(f"{sum_n_m}")
+    st.write(f"{sum_n_m}")
 def sub (n,m):
     sub_n_m = n - m
-    print(f"{sub_n_m}")
+    st.write(f"{sub_n_m}")
 def mult (n,m):
     mult_n_m = n * m
-    print(f"{mult_n_m}")
+    st.write(f"{mult_n_m}")
 def div (n,m):
     div_n_m = n / m
-    print(f"{div_n_m}")
+    st.write(f"{div_n_m}")
 def sin (a):
     sin_a_ = math.sin(a)
-    print(f"{sin_a_:.6f}")
+    st.write(f"{sin_a_:.6f}")
 def cos (a):
     cos_a = math.cos(a)
-    print(f"{cos_a:.6f}")
+    st.write(f"{cos_a:.6f}")
 def tan (a):
     tan_a_ = math.tan(a)
-    print(f"{tan_a_:.6f}")
+    st.write(f"{tan_a_:.6f}")
 def cotan (a):
     cotan_a_ = 1/(math.tan(a))
-    print(f"{cotan_a_:.6f}")
+    st.write(f"{cotan_a_:.6f}")
 def sec (a):
     sec_a_ = 1/(math.cos(a))
-    print(f"{sec_a_:.6f}")
+    st.write(f"{sec_a_:.6f}")
 def cossec (a):
     cossec_a_ = 1/(math.sin(a))
-    print(f"{cossec_a_:.6f}")
+    st.write(f"{cossec_a_:.6f}")
 def arcsin (a):
     a_ = math.degrees(a)
     arcsin_a_ = math.degrees(math.asin(a_))
-    print(f"{arcsin_a_:.6f}")
+    st.write(f"{arcsin_a_:.6f}")
 def arccos (a):
     a_ = math.degrees(a)
     arccos_a_ = math.degrees(math.acos(a_))
-    print(f"{arccos_a_:.6f}")
+    st.write(f"{arccos_a_:.6f}")
 def arctan (a):
     a_ = math.degrees(a)
     arctan_a_ = math.degrees(math.atan(a_))
-    print(f"{arctan_a_:.6f}")
+    st.write(f"{arctan_a_:.6f}")
 def arccotan (a):
     a_ = math.degrees(a)
     arccotan_a_ = math.degrees(math.atan(1/a_))
-    print(f"{arccotan_a_:.6f}")
+    st.write(f"{arccotan_a_:.6f}")
 def arcsec (a):
     a_ = math.degrees(a)
     arcsec_a_ = math.degrees(math.acos(1/a_))
-    print(f"{arcsec_a_:.6f}")
+    st.write(f"{arcsec_a_:.6f}")
 def arccossec (a):
     a_ = math.degrees(a)
     arccossec_a_ = math.degrees(math.asin(1/a_))
-    print(f"{arccossec_a_}")
+    st.write(f"{arccossec_a_}")
 print("If you want calculate trigonomety operations press T ")
 type_ = input()
 if type_ == "T":
     while True:
-        print("Input the math operation with each term separated by a space:")
-        o, n = input().split()
+        st.write("Input the math operation with each term separated by a space:")
+        o, n = st.slider().split()
         n_ = float(n)
         n_radians = math.radians(n_)
         o_ = str(o)
         calculator_T(o_,n_radians)
 else:
     while True:
-        print("Input the math operation with each term separated by a space:")
-        n, o, m = input().split()
+        st.write("Input the math operation with each term separated by a space:")
+        n, o, m = st.slider().split()
         n_ = float(n)
         o_ = str(o)
         m_ = float(m)
